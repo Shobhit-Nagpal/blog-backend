@@ -22,7 +22,7 @@ async function main() {
     await mongoose.connect(mongoDB);
 }
 
-app.use(cors({credentials: true, origin: "http://localhost:3000"}));
+app.use(cors({credentials: true, origin: true}));
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use("/", indexRouter);
 
